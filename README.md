@@ -1,5 +1,93 @@
 # DocumentAnalayzer
 
+### 결과
+- from (data/input.txt)
+```
+Let's make a simple sentence here. My second sentence. Is this too easy? Should I make the assignments harder?
+
+This is the second paragraph. I wonder how many sentences you will see here?
+
+HanwhaVision is fun! Stick around and you will have MORE fun. Just one more assignment after this one, and that one will be fun too!
+```
+- to (output.txt)
+```
+Paragraph 0:
+    Sentence 0:
+        Let's
+        make
+        a
+        simple
+        sentence
+        here
+    Sentence 1:
+        My
+        second
+        sentence
+    Sentence 2:
+        Is
+        this
+        too
+        easy
+    Sentence 3:
+        Should
+        I
+        make
+        the
+        assignments
+        harder
+
+Paragraph 1:
+    Sentence 0:
+        This
+        is
+        the
+        second
+        paragraph
+    Sentence 1:
+        I
+        wonder
+        how
+        many
+        sentences
+        you
+        will
+        see
+        here
+
+Paragraph 2:
+    Sentence 0:
+        HanwhaVision
+        is
+        fun
+    Sentence 1:
+        Stick
+        around
+        and
+        you
+        will
+        have
+        MORE
+        fun
+    Sentence 2:
+        Just
+        one
+        more
+        assignment
+        after
+        this
+        one
+        and
+        that
+        one
+        will
+        be
+        fun
+        too
+```
+
+---
+## 개요
+
 간단히 텍스트를 읽거나 검색할 때는 하나의 긴 문자 배열로 메모리에 저장하는 정도면 충분하다. <br>
 하지만 파일 속에 있는 텍스트를 좀 더 면밀하게 분석하고 싶다면 문자 배열보다는 복잡한 구조가 필요하다. 보고서 같이 여러 문단으로 구성된 문서를 분석한다고 생각해보자. 그 문서 안에 들어간 단어(word) 수, 문장(sentence) 수, 문단(paragraph) 수와 같은 정보가 필요하다. <br>
 이런 일을 위해 각 단어를 토큰으로 만든 뒤, 다음과 같은 중첩(nested) 구조에 저장하자
